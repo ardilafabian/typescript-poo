@@ -1,7 +1,7 @@
 export class MyDate {
-    public year: number;
-    public month: number;
-    public day: number;
+    private year: number;
+    private month: number;
+    private day: number;
 
     constructor(year: number, month: number, day: number) {
         this.year = year;
@@ -10,7 +10,14 @@ export class MyDate {
     }
 
     printFormat(): string {
-        return `${this.day}/${this.month}/${this.year}`;
+        return `${this.addPadding(this.day)}/${this.addPadding(this.month)}/${this.year}`;
+    }
+
+    private addPadding(value: number): string {
+        if (value < 10) {
+            return `0${value}`;
+        }
+        return value.toString();
     }
 
     add(amount: number, type: 'days' | 'months' | 'years') {
@@ -22,10 +29,12 @@ export class MyDate {
             this.year += amount;
         }
     }
+
+    getDay() {
+        return this.day;
+    }
 }
 
 const myDate = new MyDate(2022, 3, 17);
-console.log(myDate.day);
-myDate.day = 12;
 console.log(myDate.printFormat());
 
