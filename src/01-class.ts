@@ -2,7 +2,7 @@ const date = new Date(1993, 1, 13); // 0 Enero, 1 Febrero, ... 11 diciembre
 
 console.log(date);
 
-class MyDate {
+export class MyDate {
     year: number;
     month: number;
     day: number;
