@@ -6,7 +6,7 @@ export class MyDate {
     constructor(year: number, month: number, day: number) {
         this.year = year;
         this.month = month;
-        this.day = month
+        this.day = month;
     }
 
     printFormat(): string {
@@ -28,4 +28,3 @@ const myDate = new MyDate(2022, 3, 17);
 console.log(myDate.day);
 myDate.day = 12;
 console.log(myDate.printFormat());
-
