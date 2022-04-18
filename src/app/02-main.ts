@@ -10,8 +10,8 @@ productService.create({
     images: []
 });
 
-console.log(productService.all);
-const productId = productService.all[0].id;
+console.log(productService.getAll());
+const productId = productService.getAll()[0].id;
 
 
 productService.update(productId, {
