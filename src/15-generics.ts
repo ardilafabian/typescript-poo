@@ -2,7 +2,8 @@
 //     return value;
 // }
 
-function getValue<myType>(value: myType) {
+function getValue<T>(value: T) {
+    const array: T[] = [];
     return value;
 }
 
